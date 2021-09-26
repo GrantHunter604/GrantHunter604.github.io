@@ -104,6 +104,10 @@ a:visited {
 	display: flex;
 }
 
+.siteHeader {
+	text-align: center
+}
+
 @media (max-width: 1000px) {
 	.tableContainer {
 		overflow-x: scroll; 
