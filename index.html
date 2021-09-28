@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>2021 College Football Adjusted Ratings</title>
 <script src="./scripts/sortTable.js"></script>
+<script>
+window.onload = function() {
+	var currentYear = 2021;
+	var newestYear = 2021;
+	var oldestYear = 2012;
+	var yearContainerCount = 0;
+	var yearContainer = document.getElementsByClassName('yearContainer')[0];
+	var yearCountainerList = [currentYear];
+
+	for (var i = 1; yearCountainerList.length < 9; ++i) {
+		if (currentYear + i <= newestYear) {
+			yearCountainerList.unshift(currentYear + i);
+		}
+		
+		if (currentYear - i >= oldestYear) {
+			yearCountainerList.push(currentYear - i);
+		}
+	}
+	
+	yearCountainerList.forEach(function(year) {
+		var link = document.createElement('a');
+		link.href = './' + year + '.html';
+		link.innerHTML = year;
+		
+		if (year === currentYear) {
+			link.style = 'text-decoration: underline;'
+		}
+		
+		yearContainer.appendChild(link);
+		yearContainer.appendChild(document.createTextNode(' - '));
+	});
+
+	var moreLink = document.createElement('a');
+	moreLink.href = './more.html';
+	moreLink.innerHTML = 'more';
+	yearContainer.appendChild(moreLink);
+}
+</script>
 <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <body>
 <div class="contentContainer">
+<div>
+<div style="text-align: center; font-weight: bold; margin-bottom: 8px;">
+<a href="./index.html"><h1 class="siteHeader">College Football Adjusted Ratings</h1></a>
+<div class="yearContainer">
+</div>
+<div>(All game data through September 25)</div>
+</div>
 <div class="tableContainer">
-<h1 class="siteHeader">College Football Adjusted Ratings</h1>
-<div class="yearContainer"><a style="text-decoration: underline;" href="./2021.html">2021</a> - <a href="./2020.html">2020</a> - <a href="./2019.html">2019</a> - <a href="./2018.html">2018</a> - <a href="./2017.html">2017</a>
- - <a href="./2016.html">2016</a> - <a href="./2015.html">2015</a> - <a href="./2014.html">2014</a> - <a href="./2013.html">2013</a></div>
 <table class="table table-bordered table-hover table-condensed sortable">
 <thead><tr><th>Rk</th>
 <th>Team</th>
@@ -2371,6 +2414,7 @@
 <td align="right">107</td>
 </tr>
 </tbody></table>
+</div>
 </div>
 </div>
 </body>

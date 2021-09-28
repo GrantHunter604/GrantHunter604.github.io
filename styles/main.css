@@ -105,12 +105,28 @@ a:visited {
 }
 
 .siteHeader {
-	text-align: center
+	text-align: center;
+	display: inline-block;
+}
+
+.siteHeader:hover {
+	text-decoration: none !important;
+}
+
+li {
+	margin-bottom: 8px;
 }
 
 @media (max-width: 1000px) {
 	.tableContainer {
-		overflow-x: scroll; 
-		height: 100vh;
+		overflow: scroll; 
+		height: 100vh; 
+		width: 100vw;
+	}
+	
+	.contentContainer {
+		justify-content: center; 
+		display: flex;
+		flex-direction: column;
 	}
 }
