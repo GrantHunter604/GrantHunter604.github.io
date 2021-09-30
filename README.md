@@ -22,7 +22,8 @@ score of a game using the formulas:
 ## Example
 Using the 2013 Michigan @ Michigan State game as an example, the average FBS points scored in a game in 2013 was 28.42 and home field advantage was 3.10. Michigan 
 had an adjusted offensive rating of 6.95 for the year and a defensive rating of -1.61. Michigan State in 2013 had an adjusted offensive rating of 0.58 and defensive 
-rating of -16.11. Plugging the numbers into the formulas, we would have Michigan State beating Michigan by a score of 29 - 18:
+rating of -16.11. Plugging the numbers into the formulas, we would predict Michigan State beating Michigan by a score of 29 - 18 with Michigan State having a 82% win probability:
 
 *michiganStateScore = 0.58 + -1.61 + 28.42 + 0.5 * 3.10* <br/>
-*michiganScore = 6.95 + -16.11 + 28.42 - 0.5 * 3.10*
+*michiganScore = 6.95 + -16.11 + 28.42 - 0.5 * 3.10* <br/>
+<sub>\* *actual final score was a 29 - 6 Michigan State victory*</sub>
