@@ -12,7 +12,7 @@ table {
 
 td, th {
   padding: 8px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid transparent;
 }
 
 thead {
@@ -56,9 +56,8 @@ tr:nth-child(even) {
   background-color: #f1f1f1;
 }
 
-tbody>tr>:nth-child(4), tbody>tr>:nth-child(8), tbody>tr>:nth-child(10) {
-	border-right-color: #b8b8b8;
-        border-right-width: 2px;
+tbody>tr>:nth-child(5), tbody>tr>:nth-child(9), tbody>tr>:nth-child(11), tbody>tr>:nth-child(17) {
+	border-right: 1px solid #ddd;
 }
 
 tbody>tr>:nth-child(2) {
