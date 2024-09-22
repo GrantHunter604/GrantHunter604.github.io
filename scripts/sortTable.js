@@ -39,7 +39,7 @@ sorttable = {
   },
 
   makeSortable: function(table) {
-	var columnsToInvert = [2,3,4,8,10,12];
+	var columnsToInvert = [2,3,4,5,9,11,13,17,19];
   
     if (table.getElementsByTagName('thead').length == 0) {
       // table doesn't have a tHead. Since it should have, create one and
